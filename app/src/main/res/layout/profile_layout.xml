@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    card_view:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/domain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="domain" />
+
+        <ImageView
+            android:id="@+id/photoProfileView"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/domain"
+            card_view:ignore="ContentDescription"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/nameProfileView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/photoProfileView"
+            app:layout_constraintTop_toTopOf="@+id/photoProfileView"
+            tools:text="name" />
+
+        <TextView
+            android:id="@+id/lastSeenProfileView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/nameProfileView"
+            app:layout_constraintTop_toBottomOf="@+id/nameProfileView"
+            tools:text="lastSeen" />
+
+        <TextView
+            android:id="@+id/bDateProfileView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:drawablePadding="10dp"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/birthday"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/photoProfileView"
+            app:layout_constraintTop_toBottomOf="@+id/lastSeenProfileView"
+            tools:text="17.11.1992" />
+
+        <TextView
+            android:id="@+id/cityProfileView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawablePadding="10dp"
+            app:drawableStartCompat="@drawable/citymap"
+            app:layout_constraintBottom_toTopOf="@id/educationProfileView"
+            app:layout_constraintStart_toStartOf="@+id/bDateProfileView"
+            app:layout_constraintTop_toBottomOf="@id/bDateProfileView"
+            tools:text="Москва" />
+
+        <TextView
+            android:id="@+id/educationProfileView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:drawablePadding="10dp"
+            app:drawableStartCompat="@drawable/graduated"
+            app:layout_constraintBottom_toTopOf="@id/careerProfileView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/cityProfileView"
+            app:layout_constraintTop_toBottomOf="@id/cityProfileView"
+            tools:text="учеба" />
+
+        <TextView
+            android:id="@+id/careerProfileView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawablePadding="10dp"
+            app:drawableStartCompat="@drawable/work"
+            app:layout_constraintBottom_toTopOf="@id/followersCountProfileView"
+            app:layout_constraintEnd_toEndOf="@+id/educationProfileView"
+            app:layout_constraintStart_toStartOf="@+id/educationProfileView"
+            app:layout_constraintTop_toBottomOf="@id/educationProfileView"
+            tools:text="работа" />
+
+        <TextView
+            android:id="@+id/followersCountProfileView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawablePadding="10dp"
+            app:drawableStartCompat="@drawable/followers"
+            app:layout_constraintStart_toStartOf="@+id/careerProfileView"
+            app:layout_constraintTop_toBottomOf="@id/careerProfileView"
+            tools:text="подписчики" />
+
+        <TextView
+            android:id="@+id/aboutProfileView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="viewStart"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/followersCountProfileView"
+            app:layout_constraintTop_toBottomOf="@+id/followersCountProfileView"
+            tools:text="@tools:sample/lorem[30]" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

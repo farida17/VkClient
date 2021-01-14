@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="com.farida.coursework.customview.PostWithImageLayout">
+
+    <ImageView
+        android:id="@+id/avatarImgView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        tools:ignore="ContentDescription"
+        tools:src="@tools:sample/avatars"/>
+
+    <TextView
+        android:id="@+id/nameImgView"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:maxEms="15"
+        tools:text="name"/>
+
+    <TextView
+        android:id="@+id/dateImgView"
+        android:textSize="12sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        tools:text="date"/>
+
+    <TextView
+        android:id="@+id/postTxtImgView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        tools:text="@string/post_text" />
+
+    <ImageView
+        android:id="@+id/postImgView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        tools:src="@tools:sample/avatars"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/likeBtnImgView"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitXY"
+        android:src="@drawable/unlike"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/commentBtnImgView"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitXY"
+        android:src="@drawable/comment"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/shareBtnImgView"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitXY"
+        android:src="@drawable/share"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/saveImgBtnImgView"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitXY"
+        android:src="@drawable/download"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        tools:ignore="ContentDescription" />
+</merge>

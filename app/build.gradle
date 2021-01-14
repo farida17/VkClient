@@ -1,0 +1,95 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.farida.coursework"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.core:core-ktx:$androidXCoreVersion"
+    implementation "androidx.appcompat:appcompat:$appCompatVersion"
+    implementation "com.google.android.material:material:$materialVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swipeRefreshLayoutVersion"
+
+    //RecyclerView
+    implementation "androidx.recyclerview:recyclerview:$recyclerviewVersion"
+
+    //Gson
+    implementation "com.google.code.gson:gson:$gsonVersion"
+
+    //JodaTime
+    implementation "joda-time:joda-time:$jodaTimeVersion"
+
+    //RxJava
+    implementation "io.reactivex.rxjava2:rxjava:$rxjavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroidVersion"
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion"
+
+    //Shimmer
+    implementation "com.facebook.shimmer:shimmer:$shimmerVersion"
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    kapt "com.github.bumptech.glide:compiler:$glideCompilerVersion"
+
+    //CardView
+    implementation "androidx.cardview:cardview:$cardviewVersion"
+
+    //Vk
+    implementation "com.vk:androidsdk:$vkAndroidSdkVersion"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitConverterVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit2AdapterRxjava2"
+
+    //OkHttp
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3LoggingInterceptorVersion"
+    implementation "com.squareup.okhttp3:okhttp:$okhttp3Version"
+
+    //Room
+    implementation "androidx.room:room-runtime:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomCompilerVersion"
+    implementation "androidx.room:room-rxjava2:$roomRxjavaVersion"
+
+    //Moxy
+    implementation "com.github.moxy-community:moxy:$moxyVersion"
+    kapt "com.github.moxy-community:moxy-compiler:$moxyVersion"
+    implementation "com.github.moxy-community:moxy-app-compat:$moxyVersion"
+
+    //Dagger
+    kapt "com.google.dagger:dagger-compiler:$daggerCompiler"
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    implementation "com.google.dagger:dagger-android:$daggerAndroid"
+    kapt "com.google.dagger:dagger-android-processor:$daggerAndroid"
+}

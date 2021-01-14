@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/imageCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    card_view:cardCornerRadius="4dp">
+
+    <com.farida.coursework.customview.PostWithImageLayout
+        android:id="@+id/postWithImageViewGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</androidx.cardview.widget.CardView>
